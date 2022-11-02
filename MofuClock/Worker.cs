@@ -6,6 +6,7 @@ public class Worker : BackgroundService
 
     public Worker(ILogger<Worker> logger)
     {
+        // TODO
         this.logger = logger;
     }
 

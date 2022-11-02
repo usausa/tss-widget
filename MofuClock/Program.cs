@@ -1,10 +1,29 @@
 using MofuClock;
 
+Directory.SetCurrentDirectory(AppContext.BaseDirectory);
+
 var host = Host.CreateDefaultBuilder(args)
-    .ConfigureServices(services =>
+    .UseWindowsService()
+    .ConfigureLogging((context, logging) =>
     {
+        logging.ClearProviders();
+        if (context.HostingEnvironment.IsDevelopment())
+        {
+            logging.AddConsole();
+            logging.AddDebug();
+        }
+        else
+        {
+            logging.AddEventLog();
+        }
+    })
+    .ConfigureServices((context, services) =>
+    {
+        var settings = context.Configuration.GetSection("Screen").Get<Settings>();
+        services.AddSingleton(settings);
+
         services.AddHostedService<Worker>();
     })
     .Build();
 
-await host.RunAsync();
+await host.RunAsync().ConfigureAwait(false);
