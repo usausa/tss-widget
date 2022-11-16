@@ -12,14 +12,10 @@ var host = Host.CreateDefaultBuilder(args)
             logging.AddConsole();
             logging.AddDebug();
         }
-        else
-        {
-            logging.AddEventLog();
-        }
     })
     .ConfigureServices((context, services) =>
     {
-        var settings = context.Configuration.GetSection("Screen").Get<Settings>();
+        var settings = context.Configuration.GetSection("Screen").Get<Settings>()!;
         services.AddSingleton(settings);
 
         services.AddHostedService<Worker>();
