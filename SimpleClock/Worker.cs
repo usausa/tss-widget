@@ -1,4 +1,4 @@
-namespace MofuClock;
+namespace SimpleClock;
 
 public class Worker : BackgroundService
 {

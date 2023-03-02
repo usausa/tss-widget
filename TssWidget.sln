@@ -13,9 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ソリューション項目
 		Analyzers.ruleset = Analyzers.ruleset
 		Directory.Build.props = Directory.Build.props
 		Directory.Build.targets = Directory.Build.targets
-		MofuClock.sln.DotSettings = MofuClock.sln.DotSettings
 		README.md = README.md
+		TssWidget.sln.DotSettings = TssWidget.sln.DotSettings
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleClock", "SimpleClock\SimpleClock.csproj", "{F5A42D97-DACB-4FEF-AB56-952CA01A181B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{60CB4B1F-36AC-4FD9-B22F-D629456B3170}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60CB4B1F-36AC-4FD9-B22F-D629456B3170}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60CB4B1F-36AC-4FD9-B22F-D629456B3170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5A42D97-DACB-4FEF-AB56-952CA01A181B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5A42D97-DACB-4FEF-AB56-952CA01A181B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5A42D97-DACB-4FEF-AB56-952CA01A181B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5A42D97-DACB-4FEF-AB56-952CA01A181B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

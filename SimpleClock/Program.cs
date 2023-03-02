@@ -1,4 +1,4 @@
-using MofuClock;
+using SimpleClock;
 
 #pragma warning disable CA1852
 
