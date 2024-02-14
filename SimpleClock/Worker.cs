@@ -33,7 +33,7 @@ public class Worker : BackgroundService
         screen.Orientation = ScreenOrientation.ReverseLandscape;
 
         // Clear
-        var clearBuffer = screen.CreateBuffer();
+        using var clearBuffer = screen.CreateBuffer();
         clearBuffer.Clear();
         screen.DisplayBuffer(clearBuffer);
 
