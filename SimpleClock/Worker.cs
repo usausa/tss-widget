@@ -85,7 +85,7 @@ public class Worker : BackgroundService
         }
 
         // Display loop
-        while (true)
+        while (!stoppingToken.IsCancellationRequested)
         {
             var now = DateTime.Now;
             var value = (now.Hour * 100) + now.Minute;
@@ -101,7 +101,7 @@ public class Worker : BackgroundService
                 value /= 10;
             }
 
-            await Task.Delay(100, stoppingToken).ConfigureAwait(false);
+            await Task.Delay(100, stoppingToken).ConfigureAwait(ConfigureAwaitOptions.SuppressThrowing);
         }
     }
     // ReSharper restore FunctionNeverReturns
